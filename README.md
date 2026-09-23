@@ -1,32 +1,45 @@
-# Projeto Musicalidade Consciente
+<h1 align="center">Musicalidade Consciente 🎵</h1>
 
-Este repositório contém os materiais desenvolvidos para a escola de música **Musicalidade Consciente** (Faguin Guittar).
+<p align="center">
+  <a href="#">
+    <img src="https://img.shields.io/badge/Deploy-Status-00C7B7?style=for-the-badge&logo=netlify" alt="Deploy" />
+  </a>
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License MIT" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+</p>
 
-## 📁 Conteúdo do Projeto
-
-### 1. Logo
-Arquivos oficiais da identidade visual da marca.
-
-### 2. Certificados
-Modelos oficiais de certificados de conclusão de curso:
-- Canto
-- Guitarra
-- Ukulele
-- Violão (3º Módulo)
-
-### 3. E-book
-Material didático completo: **Violão Descomplicado - Da Teoria à Canção**.
-
-### 4. Documentos Oficiais
-Modelos e formulários utilizados pela empresa:
-- Contrato de Prestação de Serviços Educacionais
-- Termo de Autorização de Uso de Imagem e Voz
-- Termo de Cessão de Direitos Autorais
-- Solicitação de Uso de Espaço Público
-
-### 5. Marketing
-Artes promocionais e eventos (Ex: Festival Entre Cordas & Canções).
+<p align="center">
+  <strong>Documentação, materiais didáticos e identidade visual completa para a escola de música Musicalidade Consciente.</strong>
+</p>
 
 ---
-*Desenvolvido para organização, versionamento e distribuição de materiais.* projeto-musicalidade-consciente
-"Projeto de documentação, materiais e identidade visual para a escola de música Musicalidade Consciente."
+
+## 🔗 Live Demo
+(Em breve: link do deploy)
+
+## 📖 Sobre o Projeto
+Este repositório contém os códigos-fonte e arquivos de configuração para o projeto **Musicalidade Consciente 🎵**. O objetivo é demonstrar qualidade de código, estruturação semântica e boas práticas de Front-End.
+
+## 🛠️ Tecnologias Utilizadas
+- **HTML5** & **CSS3**
+- **JavaScript** (Vanilla)
+- **Figma** (UI/UX)
+
+## ⚙️ Como rodar localmente
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/tgojlima/projeto-musicalidade-consciente.git
+   ```
+2. Abra a pasta do projeto.
+3. Execute o arquivo principal (`index.html`) no seu navegador ou via Live Server.
+
+## 📄 Licença
+Distribuído sob a licença **MIT**. Veja o arquivo `LICENSE` para mais informações.
+
+## 👤 Autor
+**Tiago Lima**
+- 💼 LinkedIn: [tiagolima-frontend-design](https://linkedin.com/in/tiagolima-frontend-design)
+- 🐙 GitHub: [@tgojlima](https://github.com/tgojlima)
+- 🌐 Portfólio: [tiagolima-portfolio.netlify.app](https://tiagolima-portfolio.netlify.app/)
