@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Violão Descomplicado: Da Teoria à Canção | Musicalidade Consciente</title>
+  <meta name="description" content="O método passo a passo de 108 páginas para você sair do zero, dominar os acordes com segurança e entender a lógica da música no violão sem teorias confusas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --bg-card: #131b2e;
+      --bg-card-alt: #182238;
+      --primary: #f59e0b;
+      --primary-hover: #d97706;
+      --accent: #38bdf8;
+      --success: #10b981;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.1);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Top Promo Bar */
+    .promo-bar {
+      background: linear-gradient(90deg, #b45309, #f59e0b, #b45309);
+      color: #0b0f19;
+      text-align: center;
+      padding: 10px 16px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: 0.2px;
+    }
+
+    .promo-bar span.coupon-badge {
+      background: #0b0f19;
+      color: #f59e0b;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin: 0 4px;
+      font-family: monospace;
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 64px 0 72px;
+      background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.14) 0%, rgba(245, 158, 11, 0.08) 35%, transparent 70%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero-header {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 40px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 .highlight {
+      background: linear-gradient(90deg, #fbbf24, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p.subheadline {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* Video + Hero CTA Grid */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .video-wrapper {
+      background: var(--bg-card);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: var(--radius);
+      padding: 10px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    .video-caption {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .hero-offer-box {
+      background: linear-gradient(180deg, var(--bg-card-alt), var(--bg-card));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .cover-preview {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 0 auto 16px;
+      display: block;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .coupon-box {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px dashed var(--primary);
+      border-radius: 10px;
+      padding: 12px;
+      margin: 14px 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .coupon-box .coupon-info {
+      text-align: left;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .coupon-box .coupon-info strong {
+      color: var(--primary);
+      font-size: 0.95rem;
+      display: block;
+    }
+
+    .copy-btn {
+      background: var(--primary);
+      color: #0b0f19;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: 0.2s;
+      white-space: nowrap;
+    }
+
+    .copy-btn:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      padding: 18px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 12px 28px rgba(16, 185, 129, 0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(16, 185, 129, 0.5);
+    }
+
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 14px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+
+    /* Section Defaults */
+    section {
+      padding: 72px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 740px;
+      margin: 0 auto 48px;
+    }
+
+    .section-title span.tag {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Pain Points Section (Dor) */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .pain-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-top: 3px solid #ef4444;
+      padding: 26px;
+      border-radius: var(--radius);
+    }
+
+    .pain-card h3 {
+      font-size: 1.12rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pain-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Solution / Method Section */
+    .solution-banner {
+      margin-top: 36px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.14), rgba(56, 189, 248, 0.1));
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+    }
+
+    .solution-banner h3 {
+      font-size: 1.45rem;
+      margin-bottom: 10px;
+    }
+
+    .solution-banner p {
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* Curriculum / 19 Chapters */
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 24px;
+    }
+
+    .module-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .module-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    .module-header h3 {
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    .module-badge {
+      background: rgba(255, 255, 255, 0.07);
+      padding: 4px 10px;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .chapter-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .chapter-list li {
+      font-size: 0.94rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .chapter-list li span.ch-num {
+      color: var(--accent);
+      font-weight: 700;
+      min-width: 58px;
+      font-size: 0.85rem;
+      padding-top: 2px;
+    }
+
+    /* Authority / Proof Section */
+    .author-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 40px;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+
+    .author-visual {
+      text-align: center;
+    }
+
+    .author-visual img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .stat-item {
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      padding: 14px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .stat-item strong {
+      font-size: 1.5rem;
+      color: var(--primary);
+      display: block;
+    }
+
+    .stat-item span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Offer & Guarantee Section */
+    .offer-container {
+      max-width: 680px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #17213a 0%, #101729 100%);
+      border: 2px solid var(--primary);
+      border-radius: 20px;
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: 0 24px 70px rgba(245, 158, 11, 0.15);
+    }
+
+    .checklist-offer {
+      list-style: none;
+      text-align: left;
+      max-width: 480px;
+      margin: 24px auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    .checklist-offer li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.98rem;
+    }
+
+    .checklist-offer li::before {
+      content: "✓";
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--success);
+      font-weight: 800;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .guarantee-box {
+      max-width: 680px;
+      margin: 32px auto 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .guarantee-icon {
+      font-size: 2.6rem;
+      background: rgba(245, 158, 11, 0.12);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 780px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    details.faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 22px;
+    }
+
+    details.faq-item summary {
+      font-weight: 700;
+      font-size: 1.02rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    details.faq-item summary::after {
+      content: "+";
+      font-size: 1.4rem;
+      color: var(--primary);
+    }
+
+    details[open].faq-item summary::after {
+      content: "−";
+    }
+
+    details.faq-item p {
+      margin-top: 12px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      padding: 36px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .author-grid,
+      .modules-grid {
+        grid-template-columns: 1fr;
+      }
+      .guarantee-box {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE CUPOM -->
+  <div class="promo-bar">
+    🔥 OFERTA POR TEMPO LIMITADO: Use o cupom <span class="coupon-badge">EBOOK</span> no checkout e ganhe <strong>R$ 20,00 DE DESCONTO</strong>!
+  </div>
+
+  <!-- HERO + VÍDEO -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-header">
+        <div class="hero-badge">🎸 Musicalidade Consciente • Por Fagner Santos (Faguinho)</div>
+        <h1>Pare de Apenas Decorar Posições: <span class="highlight">Domine o Violão da Teoria à Canção</span></h1>
+        <p class="subheadline">
+          O guia prático de 108 páginas e 19 capítulos para você sair do zero, montar acordes com segurança e finalmente entender o que está tocando — sem apostilas confusas ou teorias que não levam a lugar nenhum.
+        </p>
+      </div>
+
+      <div class="hero-grid">
+        <!-- Player de Vídeo Embutido -->
+        <div>
+          <div class="video-wrapper">
+            <video controls preload="metadata" poster="assets/capa-oficial.png">
+              <source src="assets/Video_propaganda_ebook.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
+          <p class="video-caption">▶️ Assista ao vídeo de 30 segundos e veja como transformar sua prática no violão.</p>
+        </div>
+
+        <!-- Card Rápido de Conversão -->
+        <div class="hero-offer-box">
+          <img src="assets/capa-oficial.png" alt="Capa Ebook Violão Descomplicado" class="cover-preview" />
+          <h2 style="font-size: 1.25rem; margin-bottom: 4px;">Violão Descomplicado</h2>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Da Teoria à Canção • Edição Completa (PDF Digital)</p>
+
+          <div style="margin: 12px 0 6px;">
+            <span style="text-decoration: line-through; color: var(--text-muted); font-size: 0.95rem;">De R$ 67,00</span>
+            <div style="font-size: 1.9rem; font-weight: 800; color: var(--success); line-height: 1.1;">Por R$ 47,00 <span style="font-size: 0.8rem; font-weight: 600; color: var(--primary);">(com cupom)</span></div>
+          </div>
+
+          <div class="coupon-box">
+            <div class="coupon-info">
+              <span>Cupom de R$ 20 OFF ativo:</span>
+              <strong id="couponText">EBOOK</strong>
+            </div>
+            <button class="copy-btn" onclick="copyCoupon()">Copiar Cupom</button>
+          </div>
+
+          <a href="https://chk.eduzz.com/Z0B5VQYJWA?cupom=EBOOK" target="_blank" rel="noopener" class="btn-cta" id="cta-hero">Quero Meu Ebook Por R$ 47 →</a>
+
+          <div class="trust-badges">
+            <span>🔒 Compra 100% Segura (Eduzz)</span>
+            <span>⚡ Acesso Imediato</span>
+            <span>🛡️ 7 Dias de Garantia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEÇÃO DE DOR -->
+  <section id="dor">
+    <div class="container">
+      <div class="section-title">
+        <span class="tag">Por que tantos desistem?</span>
+        <h2>Cansado de Tentar Aprender Violão com Apostilas Confusas?</h2>
+        <p>Se você sente que está travado ou apenas "imitando dedos" sem fazer música de verdade, o problema não é falta de dom — é falta de um mapa claro.</p>
+      </div>
+
+      <div class="pain-grid">
+        <div class="pain-card">
+          <h3>❌ Refém das Cifras</h3>
+          <p>Você até decora alguns acordes soltos, mas se alguém mudar o tom da música ou tirar o papel da sua frente, você trava imediatamente.</p>
+        </div>
+        <div class="pain-card">
+          <h3>❌ Teoria Chata e Desconexa</h3>
+          <p>Já tentou assistir vídeos soltos na internet, mas só encontrou termos complicados que parecem matemática e não ajudam a tocar nenhuma música.</p>
+        </div>
+        <div class="pain-card">
+          <h3>❌ Insegurança nas Trocas</h3>
+          <p>Dedos doendo, pestanas que falham, ritmo desencontrado da voz e a sensação de que suas músicas favoritas estão sempre distantes.</p>
+        </div>
+      </div>
+
+      <div class="solution-banner">
+        <h3>A Ponte Entre o Iniciante Travado e o Violonista Consciente</h3>
+        <p>
+          No <strong>Violão Descomplicado: Da Teoria à Canção</strong>, cada conceito teórico é imediatamente aplicado ao braço do violão com mapas mentais, exercícios de 5 minutos e exemplos reais de músicas brasileiras e internacionais.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE CONTEÚDO / 19 CAPÍTULOS -->
+  <section id="conteudo">
+    <div class="container">
+      <div class="section-title">
+        <span class="tag">Conteúdo Completo • 108 Páginas</span>
+        <h2>O Que Você Vai Dominar nos 19 Capítulos</h2>
+        <p>Uma jornada estruturada em 4 etapas: do primeiro contato com o instrumento até a harmonia avançada.</p>
+      </div>
+
+      <div class="modules-grid">
+        <div class="module-card">
+          <div class="module-header">
+            <h3>Módulo 1: Fundamentos e O ABC do Violão</h3>
+            <span class="module-badge">Capítulos 1 a 4</span>
+          </div>
+          <ul class="chapter-list">
+            <li><span class="ch-num">Cap. 1–2</span> Começando no Violão e Conhecendo cada Peça (postura, anatomia e primeiros acordes Em e Am).</li>
+            <li><span class="ch-num">Cap. 3</span> Notas, Acordes e Cifras: O ABC do Violão para ler qualquer música com fluência.</li>
+            <li><span class="ch-num">Cap. 4</span> Sustenidos (#) e Bemóis (b): Dominando os meios-tons mágicos no braço do instrumento.</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <h3>Módulo 2: Os 3 Pilares e o Mapa das Escalas</h3>
+            <span class="module-badge">Capítulos 5 a 8</span>
+          </div>
+          <ul class="chapter-list">
+            <li><span class="ch-num">Cap. 5</span> Os 3 Pilares da Música: Como unir Ritmo, Melodia e Harmonia na prática.</li>
+            <li><span class="ch-num">Cap. 6</span> Melodia e Harmonia: A dança das notas ascendentes, descendentes e acordes simultâneos.</li>
+            <li><span class="ch-num">Cap. 7</span> Dominando a Escala Cromática: O "teclado mágico" de 12 notas no braço do violão.</li>
+            <li><span class="ch-num">Cap. 8</span> Escalas Diatônicas Maiores e Menores: A fórmula exata (T-T-ST-T-T-T-ST) que gera as músicas.</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <h3>Módulo 3: Harmonia Consciente na Prática</h3>
+            <span class="module-badge">Capítulos 9 a 15</span>
+          </div>
+          <ul class="chapter-list">
+            <li><span class="ch-num">Cap. 9</span> Tríades (Maiores, Menores, Aumentadas e Diminutas): Como construir acordes sem decorar.</li>
+            <li><span class="ch-num">Cap. 10</span> Acordes com Sétima (7M, 7 e m7): A tensão que move a Bossa Nova, o Pop e o Blues.</li>
+            <li><span class="ch-num">Cap. 11</span> Tétrades Diatônicas: A harmonia em 4 dimensões para sonoridades ricas e profissionais.</li>
+            <li><span class="ch-num">Cap. 12</span> Campo Harmônico Maior: O mapa definitivo para tirar músicas de ouvido e compor.</li>
+            <li><span class="ch-num">Cap. 13–15</span> Funções Harmônicas (Tônica, Subdominante, Dominante), Dominantes Secundários e Acordes Diminutos.</li>
+          </ul>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <h3>Módulo 4: Domínio Avançado e Dicionário Visual</h3>
+            <span class="module-badge">Capítulos 16 a 19</span>
+          </div>
+          <ul class="chapter-list">
+            <li><span class="ch-num">Cap. 16</span> Escalas Relativas Menores: O segredo da dualidade entre alegria e melancolia.</li>
+            <li><span class="ch-num">Cap. 17</span> Modos Gregos (Jônio a Lócrio): As 7 personalidades sonoras para solos e improvisos.</li>
+            <li><span class="ch-num">Cap. 18</span> Inversões de Acordes (C/E, D/F#): A arte do movimento suave do baixo no violão.</li>
+            <li><span class="ch-num">Cap. 19</span> Guia Visual de Acordes: Diagramas prontos de acordes maiores, menores e sustenidos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE PROVA / AUTOR -->
+  <section id="autor">
+    <div class="container">
+      <div class="author-grid">
+        <div class="author-visual">
+          <img src="assets/mockup-maos-tablet.png" alt="Leitura do Ebook Violão Descomplicado no Tablet" />
+        </div>
+        <div>
+          <span style="color: var(--primary); font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Musicalidade Consciente</span>
+          <h2 style="font-size: 2rem; margin: 8px 0 16px;">Quem é Fagner Santos (Faguinho)?</h2>
+          <p style="color: var(--text-muted); margin-bottom: 16px;">
+            Criador do projeto <strong>Musicalidade Consciente</strong>, Fagner Santos uniu anos de prática musical e ensino didático para traduzir a teoria musical em uma linguagem simples, humana e 100% aplicável ao violão.
+          </p>
+          <p style="color: var(--text-muted);">
+            Seu objetivo não é formar "robôs repetidores de cifras", mas sim músicos conscientes capazes de sentir, compreender e emocionar através dos sons.
+          </p>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <strong>108</strong>
+              <span>Páginas Didáticas</span>
+            </div>
+            <div class="stat-item">
+              <strong>19</strong>
+              <span>Capítulos Passo a Passo</span>
+            </div>
+            <div class="stat-item">
+              <strong>100%</strong>
+              <span>Aplicável na Prática</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE OFERTA + GARANTIA -->
+  <section id="oferta">
+    <div class="container">
+      <div class="offer-container">
+        <span class="hero-badge" style="margin-bottom: 12px;">Oferta Especial de Lançamento</span>
+        <h2 style="font-size: 2rem; margin-bottom: 8px;">Comece a Tocar com Consciência Hoje Mesmo</h2>
+        <p style="color: var(--text-muted);">Receba o material completo no seu e-mail imediatamente após a confirmação.</p>
+
+        <ul class="checklist-offer">
+          <li>Ebook Completo <strong>Violão Descomplicado: Da Teoria à Canção</strong> (108 páginas em PDF)</li>
+          <li>Mapas mentais e resumos visuais ao final de cada capítulo</li>
+          <li>Exercícios práticos progressivos de 5 a 10 minutos por dia</li>
+          <li>Dicionário visual de acordes maiores, menores e com pestana</li>
+          <li>Acesso vitalício para ler no celular, tablet, computador ou imprimir</li>
+        </ul>
+
+        <div style="margin: 22px 0 12px;">
+          <div style="color: var(--text-muted); font-size: 1rem; text-decoration: line-through;">Valor normal: R$ 67,00</div>
+          <div style="font-size: 2.6rem; font-weight: 800; color: var(--success); line-height: 1.15;">R$ 47,00 <span style="font-size: 1rem; color: var(--text-main); font-weight: 500;">à vista com cupom</span></div>
+          <div style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">(ou parcelado no cartão pelo checkout seguro da Eduzz)</div>
+        </div>
+
+        <div class="coupon-box" style="max-width: 440px; margin: 20px auto;">
+          <div class="coupon-info">
+            <span>Use o cupom no checkout para <strong>R$ 20 OFF</strong>:</span>
+            <strong>EBOOK</strong>
+          </div>
+          <button class="copy-btn" onclick="copyCoupon()">Copiar Cupom</button>
+        </div>
+
+        <a href="https://chk.eduzz.com/Z0B5VQYJWA?cupom=EBOOK" target="_blank" rel="noopener" class="btn-cta" id="cta-checkout" style="max-width: 480px;">
+          Garantir Meu Ebook Agora →
+        </a>
+
+        <div class="trust-badges" style="margin-top: 18px;">
+          <span>💳 Cartão, Pix ou Boleto</span>
+          <span>⚡ Entrega Automática via Eduzz</span>
+        </div>
+      </div>
+
+      <!-- Garantia 7 Dias -->
+      <div class="guarantee-box">
+        <div class="guarantee-icon">🛡️</div>
+        <div>
+          <h3 style="margin-bottom: 6px;">Garantia Incondicional de 7 Dias</h3>
+          <p style="color: var(--text-muted); font-size: 0.94rem;">
+            Você pode baixar o ebook, estudar os capítulos e testar os exercícios sem nenhum risco. Se por qualquer motivo achar que o material não é para você, basta solicitar o reembolso dentro de 7 dias na própria Eduzz e devolvemos 100% do seu investimento.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-title">
+        <span class="tag">Tire Suas Dúvidas</span>
+        <h2>Perguntas Frequentes</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Sou totalmente iniciante do zero. Esse ebook serve para mim?</summary>
+          <p>Sim! Os primeiros capítulos começam do absoluto zero: como segurar o violão, o nome de cada peça, como afinar, como ler cifras e como fazer seus primeiros acordes (Em e Am) e sua primeira música com apenas 2 acordes.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Já toco algumas músicas olhando cifras. Vou aproveitar o conteúdo?</summary>
+          <p>Com certeza! A partir do Capítulo 7 você vai destravar o braço do violão com escala cromática, formação de tríades e tétrades, campo harmônico maior, funções harmônicas, dominantes secundários, modos gregos e inversões de acordes — tudo o que falta para você se libertar das pastas de cifras.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Como recebo o acesso ao ebook após a compra?</summary>
+          <p>Assim que o pagamento é confirmado (no Pix ou Cartão é imediato), você recebe um e-mail automático da Eduzz/Nutror com o link para baixar o PDF completo no seu celular, tablet ou computador.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Como aplico o desconto de R$ 20,00?</summary>
+          <p>Basta clicar no botão de compra desta página e, na tela de pagamento da Eduzz, digitar o cupom <strong>EBOOK</strong> no campo "Possui cupom de desconto?".</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p><strong>Violão Descomplicado: Da Teoria à Canção</strong> • Copyright © Musicalidade Consciente (Fagner Santos)</p>
+      <p style="margin-top: 6px;">Edição: Tiago Lima • Revisão: Gabriela Schineider • Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyCoupon() {
+      navigator.clipboard.writeText('EBOOK');
+      const buttons = document.querySelectorAll('.copy-btn');
+      buttons.forEach(btn => {
+        const original = btn.innerText;
+        btn.innerText = 'Copiado! ✓';
+        setTimeout(() => { btn.innerText = original; }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

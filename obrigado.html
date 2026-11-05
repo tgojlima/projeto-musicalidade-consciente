@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parabéns pela Compra! Como Acessar seu Ebook | Violão Descomplicado</title>
+  <meta name="description" content="Sua compra do Ebook Violão Descomplicado: Da Teoria à Canção foi confirmada! Assista ao vídeo de 30 segundos e veja como baixar seu material." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --bg-card: #131b2e;
+      --bg-card-alt: #182238;
+      --primary: #f59e0b;
+      --primary-hover: #d97706;
+      --accent: #38bdf8;
+      --success: #10b981;
+      --success-hover: #059669;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.1);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .top-bar {
+      background: linear-gradient(90deg, #047857, #10b981, #047857);
+      color: #0b0f19;
+      text-align: center;
+      padding: 10px 16px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      letter-spacing: 0.3px;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero {
+      padding: 48px 0 64px;
+      background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.14) 0%, rgba(56, 189, 248, 0.08) 40%, transparent 70%);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: var(--success);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .header-center {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 36px;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 4vw, 2.9rem);
+      line-height: 1.18;
+      font-weight: 800;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    h1 .highlight {
+      background: linear-gradient(90deg, #34d399, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subheadline {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .video-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-caption {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      padding: 0 4px;
+    }
+
+    .access-card {
+      background: linear-gradient(180deg, var(--bg-card-alt), var(--bg-card));
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .book-mini {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .book-mini img {
+      width: 68px;
+      height: 68px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .book-mini h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .book-mini p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .steps-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-text strong {
+      display: block;
+      font-size: 0.96rem;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .step-text span {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .btn-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: linear-gradient(135deg, var(--success), var(--success-hover));
+      color: #06281e;
+      font-weight: 800;
+      font-size: 1.02rem;
+      padding: 15px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 10px 24px rgba(16, 185, 129, 0.3);
+      margin-bottom: 12px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-secondary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .tips-grid {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .tip-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .tip-box h4 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .tip-box p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+      text-align: center;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 860px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+      .tips-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    ✅ COMPRA CONFIRMADA! SEU ACESSO AO EBOOK JÁ FOI LIBERADO AUTOMÁTICAMENTE
+  </div>
+
+  <main class="hero">
+    <div class="container">
+      <div class="header-center">
+        <div class="status-badge">🎸 Bem-vindo(a) ao Musicalidade Consciente!</div>
+        <h1>Parabéns! Veja como baixar o seu <span class="highlight">Violão Descomplicado</span> agora mesmo</h1>
+        <p class="subheadline">
+          Assista ao vídeo rápido de 30 segundos abaixo onde o Faguinho e a equipe te mostram passo a passo como acessar seu Ebook em PDF e EPUB.
+        </p>
+      </div>
+
+      <div class="main-grid">
+        <!-- Vídeo Pós-Venda -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls autoplay playsinline poster="assets/capa-oficial.png">
+              <source src="assets/Video_pos_venda.mp4" type="video/mp4" />
+              Seu navegador não suporta a reprodução de vídeo.
+            </video>
+          </div>
+          <div class="video-caption">
+            <span>🔊 Clique no player caso o áudio esteja silenciado</span>
+            <span>⏱️ Duração: 00:30</span>
+          </div>
+        </div>
+
+        <!-- Passo a Passo de Acesso -->
+        <div class="access-card">
+          <div class="book-mini">
+            <img src="assets/capa-oficial.png" alt="Capa Violão Descomplicado" />
+            <div>
+              <h3>Violão Descomplicado: Da Teoria à Canção</h3>
+              <p>PDF + EPUB • 108 Páginas • 19 Capítulos</p>
+            </div>
+          </div>
+
+          <ul class="steps-list">
+            <li class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <strong>Abra o seu E-mail de Compra</strong>
+                <span>Procure pelo e-mail enviado pela <strong>Eduzz</strong> (verifique também as abas <em>Spam</em> e <em>Promoções</em>).</span>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <strong>Acesse o Portal Meu Eduzz / Nutror</strong>
+                <span>Clique no botão verde abaixo e entre com o <strong>mesmo e-mail</strong> que você usou no pagamento.</span>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <strong>Baixe o PDF ou EPUB</strong>
+                <span>Dentro da área de compras, clique em <em>Violão Descomplicado</em> para baixar o arquivo no celular, tablet ou computador!</span>
+              </div>
+            </li>
+          </ul>
+
+          <a href="https://acesso.eduzz.com" target="_blank" rel="noopener" class="btn-primary">
+            📥 Acessar Meu Ebook na Eduzz →
+          </a>
+
+          <a href="index.html" class="btn-secondary">
+            ← Voltar para a Página do Ebook
+          </a>
+        </div>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tip-box">
+          <h4>📧 Não encontrou o e-mail?</h4>
+          <p>Se você comprou via PIX ou Cartão, a liberação é imediata. Caso tenha pago por Boleto, a compensação bancária leva de 1 a 2 dias úteis.</p>
+        </div>
+        <div class="tip-box">
+          <h4>📱 Estude pelo Celular ou Tablet</h4>
+          <p>Você pode baixar o PDF direto no aparelho ou usar o aplicativo gratuito <strong>Nutror</strong> (disponível para Android e iPhone) com seu e-mail da compra.</p>
+        </div>
+        <div class="tip-box">
+          <h4>💬 Precisa de Ajuda?</h4>
+          <p>Se tiver qualquer dúvida no acesso, envie uma mensagem para nosso suporte oficial: <strong>lima.j.tiago@gmail.com</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 <strong>Musicalidade Consciente</strong> • Autor: Fagner Santos (Faguinho) • Edição: Tiago Lima</p>
+      <p style="margin-top: 6px;">Produto distribuído com segurança via <a href="https://acesso.eduzz.com" target="_blank" rel="noopener">Eduzz</a> (ID 2979942)</p>
+    </div>
+  </footer>
+
+</body>
+</html>
